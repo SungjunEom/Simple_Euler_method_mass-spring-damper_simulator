@@ -81,6 +81,6 @@ if __name__=='__main__':
         return mass, spring, damper
 
     print(len(x_list))
-    ani = FuncAnimation(fig, update, frames=len(x_list), init_func=init, blit=True, repeat=False)
+    ani = FuncAnimation(fig, update, frames=len(x_list), init_func=init, blit=True, repeat=False, interval=DELTA_T*1000)
     ani.save('mass_spring_damper.gif', writer=PillowWriter(fps=FPS))
     plt.show()
